@@ -142,9 +142,9 @@
   }
   .problem {
     display: grid;
-    grid-template-columns: 92px 360px 290px 1fr;
-    gap: 32px;
-    padding: 24px 0;
+    grid-template-columns: 80px minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 24px;
+    padding: 20px 0;
     border-bottom: 1px solid var(--border);
     flex: 1;
     align-items: center;
@@ -153,11 +153,11 @@
 
   .problem-num {
     font-family: 'Inter Tight', sans-serif;
-    font-size: 76px;
+    font-size: 66px;
     font-weight: 900;
     color: var(--coral);
     line-height: 0.8;
-    letter-spacing: -3.5px;
+    letter-spacing: -3px;
   }
 
   /* Section 1: title + description */
@@ -169,14 +169,14 @@
   }
   .problem-title {
     font-family: 'Inter Tight', sans-serif;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 800;
     color: var(--white);
     line-height: 1.15;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.4px;
   }
   .problem-desc {
-    font-size: 13px;
+    font-size: 11.5px;
     color: var(--text-mid);
     line-height: 1.5;
   }
@@ -198,8 +198,8 @@
   }
   .takeaway {
     display: flex;
-    gap: 8px;
-    font-size: 12.5px;
+    gap: 7px;
+    font-size: 11px;
     line-height: 1.4;
     color: var(--text-lt);
   }
@@ -235,7 +235,7 @@
   }
   .verbatim:hover { background: var(--navy-card-hi); }
   .verbatim-quote {
-    font-size: 12.5px;
+    font-size: 11px;
     line-height: 1.4;
     color: var(--white);
     font-style: italic;
@@ -301,6 +301,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Automation-first AML scales linearly; trust problems scale exponentially.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Support gaps beyond a threshold become regulatory blockers, not UX.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>Growth-first models build compliance debt faster than revenue can pay it.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -321,6 +322,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Local hiring and ATMs don't replace the primary-bank product stack.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Lending roadmaps without a regulatory path are vaporware.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>Users stay as secondary accounts while primary lives elsewhere.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -341,6 +343,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Transparent-pricing brands die from small betrayals, not big ones.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Audit qualifications on revenue are a confidence signal regulators read.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>Weekend FX markups contradict the founding promise. Users remember.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -387,6 +390,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>A beachhead niche optimises acquisition, not conversion to primary.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Foreign-stack neobanks can't convert expats into resident primary users.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>The wedge that opens the door doesn't keep it open.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -407,6 +411,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Subscription fees for cultural primitives (Bizum) are DOA in Spain.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Free-banking default means premium must be genuinely premium.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>Models profitable in NL don't auto-translate to Spanish norms.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -427,6 +432,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Self-funded discipline gives patience but skips external checks.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Product churn and trademark losses compound trust erosion.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>Profitability on ECB rate arbitrage is a rate bet, not a business.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -473,6 +479,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Local hubs can't substitute for product fit when primitives are missing.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Spanish infrastructure (Bizum/TGSS) is non-negotiable for autónomos.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>€100M in presence can still fail to move the awareness needle.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -493,6 +500,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>The Spanish baseline is free business banking. Incumbents defend it.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>€29/month vs free + €720 incentive is a tough sell at the door.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>Models profitable in Paris/Berlin don't translate to Madrid.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -513,6 +521,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Silence on a market's numbers is itself public disclosure.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>"Limited expansion" is corporate language for "not working".</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>A company that won't report its Spain count isn't planning to win.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -559,6 +568,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Spanish press templates last a decade. Memory is long.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>"Neobank isn't a real bank" became the default category frame.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>3-year remediation delay leaves a permanent narrative scar.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -579,6 +589,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>A founder who ignored the regulator for 5 years created the cap.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>3 years of growth paralysis = a generation of Spanish users lost.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>Compliance debt compounds: every fix reveals new issues.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -599,6 +610,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Product readiness is not market presence — rails alone don't win.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Revolut arrived with less product and still outpaced 6:1 on brand.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>Institutional instability signals counterparty risk to Spanish users.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -645,6 +657,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Spanish usury law applies BdE's specific category, not generic credit.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>STS 258/2023 fixed the quantitative rule: BdE average + 6pp = usurious.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>Retroactive rulings can void entire legacy books, not just new business.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -665,6 +678,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Yield-extraction models with no brand have no cultural moat.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Arriaga, Reclamador, Indemniza industrialised the claims in months.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>Brand equity is insurance against legal shocks you didn't see coming.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -685,6 +699,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Provisions for legal tail can outlast the pricing fix by years.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Crisis-era CEO rotation signals structural uncertainty to the market.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>"Pushed to 2027" means the shareholder clock is running out.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -731,6 +746,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Foreign-stack ops create NPS bifurcation: good product, bad bank trust.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Users explicitly say "bueno para cash, no como banco principal".</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>CNMV had to warn about phishing clones because support was unreachable.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -751,6 +767,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Single-rule regulatory tailwinds are not moats.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Raising commissions breaks the founding "€1 trades" promise.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>Business models built on a specific rule break when the rule changes.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
@@ -771,6 +788,7 @@
         <div class="takeaways-label">Key takeaways</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Deal-acquired customers have no brand loyalty.</div>
         <div class="takeaway"><span class="takeaway-dot">·</span>Competitors match price hooks within one rate cycle.</div>
+        <div class="takeaway"><span class="takeaway-dot">·</span>Brand rewiring from broker to bank is a multi-year uphill battle.</div>
       </div>
       <div class="verbatims-col">
         <div class="verbatims-label">Verbatims & news</div>
