@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Monzo Spain Competitors — Biggest Missteps</title>
+<title>Monzo Spain Competitors — Learnings</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
     --text-lt: #E8EEF5;
     --text-mid: #A8B5C7;
     --text-dim: #6b7a93;
-    --border: rgba(255,255,255,0.08);
+    --border: rgba(255,255,255,0.10);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body {
@@ -42,7 +42,7 @@
     color: var(--text-lt);
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     border-radius: 6px;
-    padding: 44px 56px 40px;
+    padding: 40px 52px 36px;
     display: flex;
     flex-direction: column;
   }
@@ -52,7 +52,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 22px;
+    margin-bottom: 16px;
   }
   .pill {
     background: var(--white);
@@ -71,30 +71,27 @@
     letter-spacing: -0.5px;
   }
 
-  /* ── Hero with "Full research" CTA ── */
+  /* ── Hero ── */
   .hero {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     gap: 28px;
-    margin-bottom: 36px;
+    margin-bottom: 22px;
   }
-  .hero-text {
-    flex: 1;
-    min-width: 0;
-  }
+  .hero-text { flex: 1; min-width: 0; }
   .title {
     font-family: 'Inter Tight', sans-serif;
-    font-size: 64px;
+    font-size: 54px;
     font-weight: 900;
     color: var(--white);
-    letter-spacing: -2.5px;
-    line-height: 0.92;
-    margin-bottom: 10px;
+    letter-spacing: -2px;
+    line-height: 0.95;
+    margin-bottom: 6px;
   }
   .subtitle {
     font-family: 'Inter Tight', sans-serif;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 500;
     color: var(--coral);
     letter-spacing: -0.3px;
@@ -104,129 +101,144 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 11px 18px;
+    padding: 10px 16px;
     background: transparent;
     border: 1.5px solid var(--coral);
     border-radius: 999px;
     color: var(--coral);
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     white-space: nowrap;
     transition: all 0.2s;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
-  .research-cta:hover {
+  .research-cta:hover { background: var(--coral); color: var(--white); }
+
+  /* ── Learnings header ── */
+  .learnings-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .learnings-header .bar {
+    height: 2px;
+    flex: 1;
     background: var(--coral);
-    color: var(--white);
+    border-radius: 2px;
   }
-  .research-cta-arrow {
-    font-size: 13px;
+  .learnings-header .label {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--coral);
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
   }
 
-  /* ── Missteps grid ── */
-  .missteps {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 36px;
+  /* ── Learnings: 3 rows ── */
+  .learnings {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     min-height: 0;
   }
-  .misstep {
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-    border-top: 3px solid var(--coral);
+  .learning {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 30px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    flex: 1;
+    align-items: center;
   }
-  .misstep-header {
+  .learning:last-child { border-bottom: none; }
+
+  /* Left: number + title */
+  .learning-left {
     display: flex;
-    align-items: baseline;
-    gap: 12px;
-    margin-top: 12px;
-    margin-bottom: 22px;
+    gap: 14px;
+    align-items: flex-start;
   }
-  .misstep-num {
+  .learning-num {
     font-family: 'Inter Tight', sans-serif;
-    font-size: 14px;
-    font-weight: 800;
+    font-size: 48px;
+    font-weight: 900;
     color: var(--coral);
-    letter-spacing: 1.8px;
+    line-height: 0.85;
+    letter-spacing: -2px;
     flex-shrink: 0;
+    min-width: 54px;
   }
-  .misstep-title {
+  .learning-title {
     font-family: 'Inter Tight', sans-serif;
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 800;
     color: var(--white);
     line-height: 1.2;
     letter-spacing: -0.4px;
+    padding-top: 6px;
   }
-  .verbatims {
+
+  /* Right: verbatims stacked horizontally */
+  .learning-right {
     display: flex;
-    flex-direction: column;
-    gap: 18px;
-    flex: 1;
+    gap: 12px;
+    flex-wrap: nowrap;
   }
   .verbatim {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-decoration: none;
     color: inherit;
-    padding: 18px 22px;
+    padding: 14px 16px;
     background: var(--navy-card);
-    border-radius: 10px;
+    border-radius: 8px;
     border-left: 3px solid var(--coral);
-    transition: all 0.15s;
-    position: relative;
+    transition: background 0.15s;
+    flex: 1;
+    min-width: 0;
   }
-  .verbatim:hover {
-    background: var(--navy-card-hi);
-  }
+  .verbatim:hover { background: var(--navy-card-hi); }
   .verbatim-quote {
-    font-family: 'Inter Tight', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 11px;
     line-height: 1.35;
     color: var(--white);
     font-style: italic;
-    margin-bottom: 12px;
-    letter-spacing: -0.2px;
+    margin-bottom: 8px;
   }
   .verbatim-quote::before {
     content: '"';
     color: var(--coral);
-    font-size: 28px;
+    font-size: 16px;
     font-weight: 900;
-    line-height: 0;
-    margin-right: 2px;
-    position: relative;
-    top: 8px;
+    margin-right: 1px;
   }
   .verbatim-quote::after {
     content: '"';
     color: var(--coral);
-    font-size: 28px;
+    font-size: 16px;
     font-weight: 900;
-    line-height: 0;
-    margin-left: 2px;
-    position: relative;
-    top: 8px;
+    margin-left: 1px;
   }
   .verbatim-source {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    font-size: 10px;
+    gap: 6px;
+    font-size: 8.5px;
     color: var(--text-mid);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
     font-weight: 700;
   }
   .verbatim-arrow {
     color: var(--coral);
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .slide-note {
@@ -244,7 +256,7 @@
 <div class="slide-note">Slide 1 / 6 — Revolut</div>
 <section class="slide">
   <div class="topbar">
-    <div class="pill">Missteps in Spain</div>
+    <div class="pill">Learnings from Spain</div>
     <div class="brand">monzo</div>
   </div>
 
@@ -253,43 +265,63 @@
       <h1 class="title">Revolut</h1>
       <div class="subtitle">won Spain, but on an infrastructure that can't serve it</div>
     </div>
-    <a class="research-cta" href="https://docs.google.com/document/d/1lMvQRje41iHpQIeplIcA6VTIFHpXTokWzWERQ7khZ5E/edit" target="_blank" rel="noopener">
-      Full research <span class="research-cta-arrow">↗</span>
-    </a>
+    <a class="research-cta" href="https://docs.google.com/document/d/1lMvQRje41iHpQIeplIcA6VTIFHpXTokWzWERQ7khZ5E/edit" target="_blank" rel="noopener">Full research ↗</a>
   </div>
 
-  <div class="missteps">
+  <div class="learnings-header">
+    <div class="label">Learnings for Monzo Spain</div>
+    <div class="bar"></div>
+  </div>
 
-    <div class="misstep">
-      <div class="misstep-header">
-        <div class="misstep-num">01</div>
-        <div class="misstep-title">Scale outran ops and regulators</div>
+  <div class="learnings">
+
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">01</div>
+        <div class="learning-title">Own the Spanish human support layer</div>
       </div>
-      <div class="verbatims">
+      <div class="learning-right">
         <a class="verbatim" href="https://www.thetwentyminutevc.com/nik-storonsky" target="_blank" rel="noopener">
           <div class="verbatim-quote">If I could do it again, I'd do things faster and cheaper.</div>
-          <div class="verbatim-source"><span>Nik Storonsky · 20VC podcast</span><span class="verbatim-arrow">↗</span></div>
+          <div class="verbatim-source"><span>Storonsky · 20VC</span><span class="verbatim-arrow">↗</span></div>
         </a>
         <a class="verbatim" href="https://www.finextra.com/newsarticle/44873/revolut-tops-fraud-leaderboard-by-a-country-mile" target="_blank" rel="noopener">
-          <div class="verbatim-quote">Revolut tops fraud leaderboard by a country mile — 10,000 complaints, double Monzo's.</div>
-          <div class="verbatim-source"><span>BBC Panorama · Finextra · Oct 2024</span><span class="verbatim-arrow">↗</span></div>
+          <div class="verbatim-quote">Revolut tops fraud leaderboard by a country mile — 10,000 complaints, double Monzo.</div>
+          <div class="verbatim-source"><span>BBC Panorama · Finextra · 2024</span><span class="verbatim-arrow">↗</span></div>
         </a>
       </div>
     </div>
 
-    <div class="misstep">
-      <div class="misstep-header">
-        <div class="misstep-num">02</div>
-        <div class="misstep-title">€100M+ in Spain, no Spanish primary bank</div>
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">02</div>
+        <div class="learning-title">Ship the full primary-bank rails before scaling local spend</div>
       </div>
-      <div class="verbatims">
+      <div class="learning-right">
         <a class="verbatim" href="https://www.catalannews.com/business/item/revolut-six-million-customers-spain-8-january-2026" target="_blank" rel="noopener">
-          <div class="verbatim-quote">6M users, 1,500 employees in Spain, 50 Barcelona ATMs — yet no Spanish mortgages, no BNPL, no Social Security.</div>
+          <div class="verbatim-quote">6M users, 1,500 employees, 50 ATMs — yet no mortgages, no BNPL, no Social Security.</div>
           <div class="verbatim-source"><span>Catalan News · Jan 2026</span><span class="verbatim-arrow">↗</span></div>
         </a>
+        <a class="verbatim" href="https://www.financemagnates.com/fintech/revolut-hits-6-million-users-in-spain-becoming-fourth-largest-bank-by-penetration/" target="_blank" rel="noopener">
+          <div class="verbatim-quote">4th-largest bank in Spain by customer count — still no path to lending products.</div>
+          <div class="verbatim-source"><span>Finance Magnates · 2026</span><span class="verbatim-arrow">↗</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">03</div>
+        <div class="learning-title">Transparent pricing is a trust signal, not a feature</div>
+      </div>
+      <div class="learning-right">
         <a class="verbatim" href="https://accountancyage.com/2025/08/08/revolut-taps-ey-for-2024-audit-after-bdo-revenue-concerns/" target="_blank" rel="noopener">
           <div class="verbatim-quote">BDO was unable to verify £477M of £636M revenue. EY replaced them for the 2024 audit.</div>
-          <div class="verbatim-source"><span>Accountancy Age · Aug 2025</span><span class="verbatim-arrow">↗</span></div>
+          <div class="verbatim-source"><span>Accountancy Age · 2025</span><span class="verbatim-arrow">↗</span></div>
+        </a>
+        <a class="verbatim" href="https://www.helpmycash.com/banco/revolut/" target="_blank" rel="noopener">
+          <div class="verbatim-quote">Revolut Spain: 8.4/10 overall, 2.9/5 for support. Still charges 1% weekend FX markup in 2026.</div>
+          <div class="verbatim-source"><span>HelpMyCash · ongoing</span><span class="verbatim-arrow">↗</span></div>
         </a>
       </div>
     </div>
@@ -301,7 +333,7 @@
 <div class="slide-note">Slide 2 / 6 — Bunq</div>
 <section class="slide">
   <div class="topbar">
-    <div class="pill">Missteps in Spain</div>
+    <div class="pill">Learnings from Spain</div>
     <div class="brand">monzo</div>
   </div>
 
@@ -310,43 +342,63 @@
       <h1 class="title">Bunq</h1>
       <div class="subtitle">seven years in Spain, still trapped in the expat niche</div>
     </div>
-    <a class="research-cta" href="https://docs.google.com/document/d/1jzST7_6ntKwMjboAg-2_89eRvlOd0MxwVq4tjB06lMQ/edit" target="_blank" rel="noopener">
-      Full research <span class="research-cta-arrow">↗</span>
-    </a>
+    <a class="research-cta" href="https://docs.google.com/document/d/1jzST7_6ntKwMjboAg-2_89eRvlOd0MxwVq4tjB06lMQ/edit" target="_blank" rel="noopener">Full research ↗</a>
   </div>
 
-  <div class="missteps">
+  <div class="learnings-header">
+    <div class="label">Learnings for Monzo Spain</div>
+    <div class="bar"></div>
+  </div>
 
-    <div class="misstep">
-      <div class="misstep-header">
-        <div class="misstep-num">01</div>
-        <div class="misstep-title">Won the wedge, never built the conversion path</div>
+  <div class="learnings">
+
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">01</div>
+        <div class="learning-title">The expat wedge is a beachhead, not a market</div>
       </div>
-      <div class="verbatims">
+      <div class="learning-right">
         <a class="verbatim" href="https://thepaypers.com/fintech/news/bunq-integrates-bizum-to-advance-its-position-in-spain" target="_blank" rel="noopener">
-          <div class="verbatim-quote">Bunq integrates Bizum to advance its position in Spain — four years after launching in the country.</div>
+          <div class="verbatim-quote">Bunq integrates Bizum — four years after launching in the country.</div>
           <div class="verbatim-source"><span>The Paypers · May 2025</span><span class="verbatim-arrow">↗</span></div>
         </a>
         <a class="verbatim" href="https://www.infobae.com/america/agencias/2025/05/27/bunq-lanza-bizum-para-sus-usuarios-en-espana/" target="_blank" rel="noopener">
-          <div class="verbatim-quote">Bunq lanza Bizum para sus usuarios en España — gated behind paid tiers in a free-banking market.</div>
+          <div class="verbatim-quote">Bunq lanza Bizum para sus usuarios en España — gated behind paid tiers.</div>
           <div class="verbatim-source"><span>Infobae · May 2025</span><span class="verbatim-arrow">↗</span></div>
         </a>
       </div>
     </div>
 
-    <div class="misstep">
-      <div class="misstep-header">
-        <div class="misstep-num">02</div>
-        <div class="misstep-title">Founder-absolute governance, no external discipline</div>
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">02</div>
+        <div class="learning-title">Founder-absolute governance needs an external brake</div>
       </div>
-      <div class="verbatims">
+      <div class="learning-right">
         <a class="verbatim" href="https://tech.eu/2024/05/14/bunq-launches-beefed-up-ai-chatbot-20-and-confirms-commitment-to-re-apply-for-us-banking-licence-after-withdrawal/" target="_blank" rel="noopener">
           <div class="verbatim-quote">That was a mistake on our end. In the US, you cannot pause the clock.</div>
-          <div class="verbatim-source"><span>Ali Niknam · Tech.eu · May 2024</span><span class="verbatim-arrow">↗</span></div>
+          <div class="verbatim-source"><span>Niknam · Tech.eu · 2024</span><span class="verbatim-arrow">↗</span></div>
         </a>
         <a class="verbatim" href="https://easy.com/banking-giants-bunq-com-in-a-humiliating-climb-down-by-stopping-all-illegal-use-of-easy-prefix/" target="_blank" rel="noopener">
-          <div class="verbatim-quote">Banking giant Bunq in a humiliating climbdown — forced to stop all use of the 'Easy' prefix after EasyGroup lawsuit.</div>
+          <div class="verbatim-quote">Bunq in a humiliating climbdown — forced to stop all use of the 'Easy' prefix.</div>
           <div class="verbatim-source"><span>easy.com · Dec 2024</span><span class="verbatim-arrow">↗</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">03</div>
+        <div class="learning-title">Support headcount belongs in the launch budget, not optimised later</div>
+      </div>
+      <div class="learning-right">
+        <a class="verbatim" href="https://thenextweb.com/news/bunq-new-generative-ai-chatbot-finn" target="_blank" rel="noopener">
+          <div class="verbatim-quote">Finn is still not near where we would like it to be.</div>
+          <div class="verbatim-source"><span>Niknam on his own chatbot · TNW</span><span class="verbatim-arrow">↗</span></div>
+        </a>
+        <a class="verbatim" href="https://www.trustpilot.com/review/bunq.com" target="_blank" rel="noopener">
+          <div class="verbatim-quote">Scam. Theft. Held hostage. Funds frozen for 4 months with no explanation.</div>
+          <div class="verbatim-source"><span>Trustpilot bunq · pattern</span><span class="verbatim-arrow">↗</span></div>
         </a>
       </div>
     </div>
@@ -358,7 +410,7 @@
 <div class="slide-note">Slide 3 / 6 — Qonto</div>
 <section class="slide">
   <div class="topbar">
-    <div class="pill">Missteps in Spain</div>
+    <div class="pill">Learnings from Spain</div>
     <div class="brand">monzo</div>
   </div>
 
@@ -367,43 +419,59 @@
       <h1 class="title">Qonto</h1>
       <div class="subtitle">€100M in Barcelona, no complete product to sell</div>
     </div>
-    <a class="research-cta" href="https://docs.google.com/document/d/10rBKvctxq42Tu-s7UiBGwbFh07UdU5y65m2Ffv0A6oc/edit" target="_blank" rel="noopener">
-      Full research <span class="research-cta-arrow">↗</span>
-    </a>
+    <a class="research-cta" href="https://docs.google.com/document/d/10rBKvctxq42Tu-s7UiBGwbFh07UdU5y65m2Ffv0A6oc/edit" target="_blank" rel="noopener">Full research ↗</a>
   </div>
 
-  <div class="missteps">
+  <div class="learnings-header">
+    <div class="label">Learnings for Monzo Spain</div>
+    <div class="bar"></div>
+  </div>
 
-    <div class="misstep">
-      <div class="misstep-header">
-        <div class="misstep-num">01</div>
-        <div class="misstep-title">Local presence without the local product</div>
+  <div class="learnings">
+
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">01</div>
+        <div class="learning-title">Spanish infrastructure before marketing spend</div>
       </div>
-      <div class="verbatims">
+      <div class="learning-right">
         <a class="verbatim" href="https://www.maddyness.com/2023/10/04/qonto-barcelona-hub-espagne/" target="_blank" rel="noopener">
           <div class="verbatim-quote">Qonto opens Barcelona hub with €100M investment — its biggest bet on Spain.</div>
           <div class="verbatim-source"><span>Maddyness · Oct 2023</span><span class="verbatim-arrow">↗</span></div>
         </a>
-        <a class="verbatim" href="https://qonto.com/en/company" target="_blank" rel="noopener">
-          <div class="verbatim-quote">Qonto discloses 600K+ customers across 8 European markets. Spain-specific user count: never broken out.</div>
-          <div class="verbatim-source"><span>Qonto corporate · 2026</span><span class="verbatim-arrow">↗</span></div>
+        <a class="verbatim" href="https://sede.agenciatributaria.gob.es/Sede/colaboracion-social/presentacion-declaraciones-pago-entidades-colaboradoras.html" target="_blank" rel="noopener">
+          <div class="verbatim-quote">Qonto not on the AEAT / TGSS collaborator list — can't process Social Security payments.</div>
+          <div class="verbatim-source"><span>Agencia Tributaria · registry</span><span class="verbatim-arrow">↗</span></div>
         </a>
       </div>
     </div>
 
-    <div class="misstep">
-      <div class="misstep-header">
-        <div class="misstep-num">02</div>
-        <div class="misstep-title">€29/month in a free-banking market</div>
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">02</div>
+        <div class="learning-title">Free by default for primary use cases</div>
       </div>
-      <div class="verbatims">
+      <div class="learning-right">
         <a class="verbatim" href="https://qonto.com/es/pricing" target="_blank" rel="noopener">
-          <div class="verbatim-quote">Qonto Spain: plans from €29/month — only competitor charging from day one.</div>
+          <div class="verbatim-quote">Qonto Spain: plans from €29/month. Only competitor charging from day one.</div>
           <div class="verbatim-source"><span>Qonto.com/es/pricing · 2026</span><span class="verbatim-arrow">↗</span></div>
         </a>
         <a class="verbatim" href="https://www.bbva.es/empresas/productos/cuenta-online-negocios.html" target="_blank" rel="noopener">
-          <div class="verbatim-quote">BBVA, Santander and Sabadell now offer free business accounts with up to €720 in cash incentives.</div>
+          <div class="verbatim-quote">BBVA, Santander and Sabadell offer free business accounts with up to €720 in cash incentives.</div>
           <div class="verbatim-source"><span>BBVA / Santander · 2026</span><span class="verbatim-arrow">↗</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">03</div>
+        <div class="learning-title">Public Spain KPIs from day 1, or you'll never be accountable</div>
+      </div>
+      <div class="learning-right">
+        <a class="verbatim" href="https://qonto.com/en/company" target="_blank" rel="noopener">
+          <div class="verbatim-quote">Qonto discloses 600K+ customers across 8 markets — Spain user count: never broken out.</div>
+          <div class="verbatim-source"><span>Qonto corporate · 2026</span><span class="verbatim-arrow">↗</span></div>
         </a>
       </div>
     </div>
@@ -415,7 +483,7 @@
 <div class="slide-note">Slide 4 / 6 — N26</div>
 <section class="slide">
   <div class="topbar">
-    <div class="pill">Missteps in Spain</div>
+    <div class="pill">Learnings from Spain</div>
     <div class="brand">monzo</div>
   </div>
 
@@ -424,19 +492,39 @@
       <h1 class="title">N26</h1>
       <div class="subtitle">had every Spanish advantage and still lost to Revolut</div>
     </div>
-    <a class="research-cta" href="https://docs.google.com/document/d/10r3jVNSHFH2G4ZYu1mdw9g4nAeRU0C_Szg78MOixbvI/edit" target="_blank" rel="noopener">
-      Full research <span class="research-cta-arrow">↗</span>
-    </a>
+    <a class="research-cta" href="https://docs.google.com/document/d/10r3jVNSHFH2G4ZYu1mdw9g4nAeRU0C_Szg78MOixbvI/edit" target="_blank" rel="noopener">Full research ↗</a>
   </div>
 
-  <div class="missteps">
+  <div class="learnings-header">
+    <div class="label">Learnings for Monzo Spain</div>
+    <div class="bar"></div>
+  </div>
 
-    <div class="misstep">
-      <div class="misstep-header">
-        <div class="misstep-num">01</div>
-        <div class="misstep-title">The 2020 SEPE scandal that never healed</div>
+  <div class="learnings">
+
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">01</div>
+        <div class="learning-title">Rails don't win Spain. Show up.</div>
       </div>
-      <div class="verbatims">
+      <div class="learning-right">
+        <a class="verbatim" href="https://sifted.eu/articles/n26-ceo-valentin-stalf-interview" target="_blank" rel="noopener">
+          <div class="verbatim-quote">We had a banking licence for five years before having any discussion with the regulator.</div>
+          <div class="verbatim-source"><span>Stalf · Sifted</span><span class="verbatim-arrow">↗</span></div>
+        </a>
+        <a class="verbatim" href="https://techcrunch.com/2024/05/29/germanys-financial-regulator-ends-aml-cap-on-n26-signups-after-10m-fine/" target="_blank" rel="noopener">
+          <div class="verbatim-quote">BaFin ends AML cap on N26 signups after €10M fine — three lost years.</div>
+          <div class="verbatim-source"><span>TechCrunch · May 2024</span><span class="verbatim-arrow">↗</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">02</div>
+        <div class="learning-title">One bad Spanish headline defines your brand for a decade</div>
+      </div>
+      <div class="learning-right">
         <a class="verbatim" href="https://spainsnews.com/n26-leaves-spanish-clients-without-unemployment-benefits-because-it-is-not-a-collaborating-entity/" target="_blank" rel="noopener">
           <div class="verbatim-quote">N26 leaves Spanish clients without unemployment benefits because it is not a collaborating entity.</div>
           <div class="verbatim-source"><span>Spain's News · 2020</span><span class="verbatim-arrow">↗</span></div>
@@ -448,19 +536,19 @@
       </div>
     </div>
 
-    <div class="misstep">
-      <div class="misstep-header">
-        <div class="misstep-num">02</div>
-        <div class="misstep-title">Rails without reach, and a founder who never talked to the regulator</div>
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">03</div>
+        <div class="learning-title">Institutional stability is a primary-bank requirement</div>
       </div>
-      <div class="verbatims">
-        <a class="verbatim" href="https://sifted.eu/articles/n26-ceo-valentin-stalf-interview" target="_blank" rel="noopener">
-          <div class="verbatim-quote">We had a banking licence for five years before having any discussion with the regulator.</div>
-          <div class="verbatim-source"><span>Valentin Stalf · Sifted</span><span class="verbatim-arrow">↗</span></div>
-        </a>
+      <div class="learning-right">
         <a class="verbatim" href="https://sifted.eu/articles/n26-cofounder-stalf-steps-down" target="_blank" rel="noopener">
-          <div class="verbatim-quote">N26 cofounder Valentin Stalf steps down as CEO following investor bust-up.</div>
+          <div class="verbatim-quote">N26 cofounder Valentin Stalf steps down following investor bust-up.</div>
           <div class="verbatim-source"><span>Sifted · Aug 2025</span><span class="verbatim-arrow">↗</span></div>
+        </a>
+        <a class="verbatim" href="https://www.amlintelligence.com/2025/12/n26-blocked-from-issuing-mortgages-in-the-netherlands/" target="_blank" rel="noopener">
+          <div class="verbatim-quote">N26 blocked from issuing mortgages in the Netherlands over AML concerns.</div>
+          <div class="verbatim-source"><span>AML Intelligence · Dec 2025</span><span class="verbatim-arrow">↗</span></div>
         </a>
       </div>
     </div>
@@ -472,7 +560,7 @@
 <div class="slide-note">Slide 5 / 6 — WiZink</div>
 <section class="slide">
   <div class="topbar">
-    <div class="pill">Missteps in Spain</div>
+    <div class="pill">Learnings from Spain</div>
     <div class="brand">monzo</div>
   </div>
 
@@ -481,43 +569,63 @@
       <h1 class="title">WiZink</h1>
       <div class="subtitle">one Spanish Supreme Court ruling destroyed the core</div>
     </div>
-    <a class="research-cta" href="https://docs.google.com/document/d/1ezbLLrZXVXkJWDjWyuDXyp8xzz92gBokvnh19Rzc8C0/edit" target="_blank" rel="noopener">
-      Full research <span class="research-cta-arrow">↗</span>
-    </a>
+    <a class="research-cta" href="https://docs.google.com/document/d/1ezbLLrZXVXkJWDjWyuDXyp8xzz92gBokvnh19Rzc8C0/edit" target="_blank" rel="noopener">Full research ↗</a>
   </div>
 
-  <div class="missteps">
+  <div class="learnings-header">
+    <div class="label">Learnings for Monzo Spain</div>
+    <div class="bar"></div>
+  </div>
 
-    <div class="misstep">
-      <div class="misstep-header">
-        <div class="misstep-num">01</div>
-        <div class="misstep-title">Built on APRs the Supreme Court then outlawed</div>
+  <div class="learnings">
+
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">01</div>
+        <div class="learning-title">Hard-code BdE + 6pp into every Spanish credit product</div>
       </div>
-      <div class="verbatims">
+      <div class="learning-right">
         <a class="verbatim" href="https://www.legaltoday.com/practica-juridica/derecho-civil/civil/sts-de-pleno-149-2020-usura-en-tarjetas-revolving-2020-10-22/" target="_blank" rel="noopener">
-          <div class="verbatim-quote">STS 149/2020: usura en tarjetas revolving — 26.82% APR declared usurious, contracts voided, excess interest refundable.</div>
+          <div class="verbatim-quote">STS 149/2020: 26.82% APR declared usurious. Contracts voided. Excess interest refundable.</div>
           <div class="verbatim-source"><span>Legal Today · 2020</span><span class="verbatim-arrow">↗</span></div>
         </a>
         <a class="verbatim" href="https://www.abogacia.es/publicaciones/blogs/blog-de-derecho-de-los-consumidores/la-sala-1a-del-ts-fija-en-seis-puntos-porcentuales/" target="_blank" rel="noopener">
-          <div class="verbatim-quote">STS 258/2023: the Supreme Court fixes the rule — Bank of Spain average + 6 percentage points = usurious.</div>
-          <div class="verbatim-source"><span>Abogacía Española · Feb 2023</span><span class="verbatim-arrow">↗</span></div>
+          <div class="verbatim-quote">STS 258/2023 fixes the rule: Bank of Spain average + 6 percentage points = usurious.</div>
+          <div class="verbatim-source"><span>Abogacía Española · 2023</span><span class="verbatim-arrow">↗</span></div>
         </a>
       </div>
     </div>
 
-    <div class="misstep">
-      <div class="misstep-header">
-        <div class="misstep-num">02</div>
-        <div class="misstep-title">PE roll-up with no Spanish brand to defend them</div>
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">02</div>
+        <div class="learning-title">Brand equity is defensibility — build it before you need it</div>
       </div>
-      <div class="verbatims">
+      <div class="learning-right">
         <a class="verbatim" href="https://theobjective.com/economia/banca/2025-12-11/wizink-singular-ubs-bancos-perdidas-espana/" target="_blank" rel="noopener">
           <div class="verbatim-quote">WiZink, Singular y UBS: los bancos incapaces de salir de pérdidas en España.</div>
           <div class="verbatim-source"><span>TheObjective · Dec 2025</span><span class="verbatim-arrow">↗</span></div>
         </a>
+        <a class="verbatim" href="https://www.bolsamania.com/noticias/mercados/wizink-reduce-sus-perdidas-un-54-en-2024--19122376.html" target="_blank" rel="noopener">
+          <div class="verbatim-quote">WiZink reduces losses 54% in 2024 — €81M in revolving provisions, still loss-making.</div>
+          <div class="verbatim-source"><span>Bolsamanía · Dec 2024</span><span class="verbatim-arrow">↗</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">03</div>
+        <div class="learning-title">Plan for Spain's industrialised claims ecosystem</div>
+      </div>
+      <div class="learning-right">
         <a class="verbatim" href="https://www.arriagaasociados.com/2023/04/comunicaciones-wizink-clientes-tarjeta-revolving/" target="_blank" rel="noopener">
-          <div class="verbatim-quote">'Reclamar WiZink' became a household phrase — industrialised no-win-no-fee claims ecosystem.</div>
-          <div class="verbatim-source"><span>Arriaga Asociados · ongoing</span><span class="verbatim-arrow">↗</span></div>
+          <div class="verbatim-quote">'Reclamar WiZink' industrialised as a household phrase — no-win-no-fee claims at scale.</div>
+          <div class="verbatim-source"><span>Arriaga Asociados</span><span class="verbatim-arrow">↗</span></div>
+        </a>
+        <a class="verbatim" href="https://www.eleconomista.es/banca-finanzas/noticias/12946062/08/23/el-banco-de-espana-multa-con-27-millones-a-wizink-por-deficiencias-de-informacion.html" target="_blank" rel="noopener">
+          <div class="verbatim-quote">El Banco de España multa con 2,7 millones a WiZink por deficiencias de información.</div>
+          <div class="verbatim-source"><span>El Economista · 2023</span><span class="verbatim-arrow">↗</span></div>
         </a>
       </div>
     </div>
@@ -529,7 +637,7 @@
 <div class="slide-note">Slide 6 / 6 — Trade Republic</div>
 <section class="slide">
   <div class="topbar">
-    <div class="pill">Missteps in Spain</div>
+    <div class="pill">Learnings from Spain</div>
     <div class="brand">monzo</div>
   </div>
 
@@ -538,43 +646,59 @@
       <h1 class="title">Trade Republic</h1>
       <div class="subtitle">1M Spanish users, but none of them see it as a bank</div>
     </div>
-    <a class="research-cta" href="https://docs.google.com/document/d/1PMy1VDswCKZBdhBgm8vuVd09eP7yH87JxbkM-47oNOU/edit" target="_blank" rel="noopener">
-      Full research <span class="research-cta-arrow">↗</span>
-    </a>
+    <a class="research-cta" href="https://docs.google.com/document/d/1PMy1VDswCKZBdhBgm8vuVd09eP7yH87JxbkM-47oNOU/edit" target="_blank" rel="noopener">Full research ↗</a>
   </div>
 
-  <div class="missteps">
+  <div class="learnings-header">
+    <div class="label">Learnings for Monzo Spain</div>
+    <div class="bar"></div>
+  </div>
 
-    <div class="misstep">
-      <div class="misstep-header">
-        <div class="misstep-num">01</div>
-        <div class="misstep-title">Four years on a German stack, no Spanish trust</div>
+  <div class="learnings">
+
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">01</div>
+        <div class="learning-title">Pick one Spanish story and hold it 24 months minimum</div>
       </div>
-      <div class="verbatims">
+      <div class="learning-right">
         <a class="verbatim" href="https://www.rankia.com/blog/mejores-brokers/5153157-trade-republic-opiniones-comisiones-regulacion-plataforma-analisis" target="_blank" rel="noopener">
           <div class="verbatim-quote">Bueno para tener cash, pero no lo uses como banco principal.</div>
-          <div class="verbatim-source"><span>Rankia forum · Spanish users</span><span class="verbatim-arrow">↗</span></div>
+          <div class="verbatim-source"><span>Rankia forum · ES users</span><span class="verbatim-arrow">↗</span></div>
         </a>
-        <a class="verbatim" href="https://www.trustpilot.com/review/www.traderepublic.com" target="_blank" rel="noopener">
-          <div class="verbatim-quote">Almost €9,000 I cannot withdraw. 20 support messages, only AI-generated replies.</div>
-          <div class="verbatim-source"><span>Trustpilot · 33K+ reviews · 1.6–2.0★</span><span class="verbatim-arrow">↗</span></div>
+        <a class="verbatim" href="https://sifted.eu/articles/trade-republic-vs-robinhood" target="_blank" rel="noopener">
+          <div class="verbatim-quote">We are nothing like Robinhood. Our real competitor is the piggy bank.</div>
+          <div class="verbatim-source"><span>Hecker · Sifted</span><span class="verbatim-arrow">↗</span></div>
         </a>
       </div>
     </div>
 
-    <div class="misstep">
-      <div class="misstep-header">
-        <div class="misstep-num">02</div>
-        <div class="misstep-title">Whole business on a revenue stream the EU is about to ban</div>
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">02</div>
+        <div class="learning-title">Don't bet the business on a headline number</div>
       </div>
-      <div class="verbatims">
+      <div class="learning-right">
         <a class="verbatim" href="https://www.financemagnates.com/forex/analysis/pfof-ban-threatens-the-free-trade-era-for-europe-neobrokers/" target="_blank" rel="noopener">
-          <div class="verbatim-quote">PFOF ban threatens the free-trade era for Europe neobrokers — &gt;30% of TR revenue banned 30 June 2026.</div>
+          <div class="verbatim-quote">PFOF ban threatens the free-trade era for Europe neobrokers — &gt;30% of TR revenue gone 30 June 2026.</div>
           <div class="verbatim-source"><span>Finance Magnates</span><span class="verbatim-arrow">↗</span></div>
         </a>
-        <a class="verbatim" href="https://sifted.eu/articles/trade-republic-vs-robinhood" target="_blank" rel="noopener">
-          <div class="verbatim-quote">We are nothing like Robinhood. Our real competitor is the piggy bank.</div>
-          <div class="verbatim-source"><span>Christian Hecker · Sifted</span><span class="verbatim-arrow">↗</span></div>
+      </div>
+    </div>
+
+    <div class="learning">
+      <div class="learning-left">
+        <div class="learning-num">03</div>
+        <div class="learning-title">Local ops, local language, local branch — from day 1</div>
+      </div>
+      <div class="learning-right">
+        <a class="verbatim" href="https://www.trustpilot.com/review/www.traderepublic.com" target="_blank" rel="noopener">
+          <div class="verbatim-quote">Almost €9,000 I cannot withdraw. 20 support messages, only AI-generated replies.</div>
+          <div class="verbatim-source"><span>Trustpilot · 33K+ reviews · 1.6–2.0★</span><span class="verbatim-arrow">↗</span></div>
+        </a>
+        <a class="verbatim" href="https://www.businesswire.com/news/home/20250108855357/en/" target="_blank" rel="noopener">
+          <div class="verbatim-quote">TR opens Spanish branch — four years after launching in the country.</div>
+          <div class="verbatim-source"><span>Business Wire · Jan 2025</span><span class="verbatim-arrow">↗</span></div>
         </a>
       </div>
     </div>
