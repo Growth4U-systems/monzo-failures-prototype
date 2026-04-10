@@ -157,7 +157,7 @@
   }
   .learning:last-child { border-bottom: none; }
 
-  /* Left: number + title */
+  /* Left: number + title + description */
   .learning-left {
     display: flex;
     gap: 14px;
@@ -165,22 +165,32 @@
   }
   .learning-num {
     font-family: 'Inter Tight', sans-serif;
-    font-size: 48px;
+    font-size: 46px;
     font-weight: 900;
     color: var(--coral);
     line-height: 0.85;
     letter-spacing: -2px;
     flex-shrink: 0;
-    min-width: 54px;
+    min-width: 50px;
+  }
+  .learning-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 4px;
   }
   .learning-title {
     font-family: 'Inter Tight', sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 800;
     color: var(--white);
-    line-height: 1.2;
+    line-height: 1.18;
     letter-spacing: -0.4px;
-    padding-top: 6px;
+  }
+  .learning-desc {
+    font-size: 10.5px;
+    color: var(--text-mid);
+    line-height: 1.45;
   }
 
   /* Right: verbatims stacked horizontally */
@@ -278,7 +288,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">01</div>
-        <div class="learning-title">Own the Spanish human support layer</div>
+        <div class="learning-body">
+          <div class="learning-title">Own the Spanish human support layer</div>
+          <div class="learning-desc">Automation-first AML can't do account recovery at 6M Spanish users. Human escalation in Spanish is the defensible moat.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://www.thetwentyminutevc.com/nik-storonsky" target="_blank" rel="noopener">
@@ -295,7 +308,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">02</div>
-        <div class="learning-title">Ship the full primary-bank rails before scaling local spend</div>
+        <div class="learning-body">
+          <div class="learning-title">Ship the full primary-bank rails before scaling local spend</div>
+          <div class="learning-desc">Social Security, BNPL, mortgages — ship the full stack before marketing spend, or you're a second wallet.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://www.catalannews.com/business/item/revolut-six-million-customers-spain-8-january-2026" target="_blank" rel="noopener">
@@ -312,7 +328,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">03</div>
-        <div class="learning-title">Transparent pricing is a trust signal, not a feature</div>
+        <div class="learning-body">
+          <div class="learning-title">Transparent pricing is a trust signal, not a feature</div>
+          <div class="learning-desc">Weekend FX markups and audit qualifications contradict the 'transparent' brand. Zero hidden fees, or the brand is a lie.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://accountancyage.com/2025/08/08/revolut-taps-ey-for-2024-audit-after-bdo-revenue-concerns/" target="_blank" rel="noopener">
@@ -355,7 +374,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">01</div>
-        <div class="learning-title">The expat wedge is a beachhead, not a market</div>
+        <div class="learning-body">
+          <div class="learning-title">The expat wedge is a beachhead, not a market</div>
+          <div class="learning-desc">No-NIE onboarding opens the door. Converting to primary bank needs Bizum in free tier, SEPE, AEAT and local rails.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://thepaypers.com/fintech/news/bunq-integrates-bizum-to-advance-its-position-in-spain" target="_blank" rel="noopener">
@@ -372,7 +394,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">02</div>
-        <div class="learning-title">Founder-absolute governance needs an external brake</div>
+        <div class="learning-body">
+          <div class="learning-title">Founder-absolute governance needs an external brake</div>
+          <div class="learning-desc">Self-funded discipline builds profitability but skips the checks — trademark loss, chatbot failure, US withdrawal, support collapse.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://tech.eu/2024/05/14/bunq-launches-beefed-up-ai-chatbot-20-and-confirms-commitment-to-re-apply-for-us-banking-licence-after-withdrawal/" target="_blank" rel="noopener">
@@ -389,7 +414,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">03</div>
-        <div class="learning-title">Support headcount belongs in the launch budget, not optimised later</div>
+        <div class="learning-body">
+          <div class="learning-title">Support headcount belongs in the launch budget, not optimised later</div>
+          <div class="learning-desc">If fixing support breaks unit economics, the unit economics were wrong. Bake it into the model from day 1.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://thenextweb.com/news/bunq-new-generative-ai-chatbot-finn" target="_blank" rel="noopener">
@@ -432,7 +460,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">01</div>
-        <div class="learning-title">Spanish infrastructure before marketing spend</div>
+        <div class="learning-body">
+          <div class="learning-title">Spanish infrastructure before marketing spend</div>
+          <div class="learning-desc">No Bizum, no TGSS, no AEAT = no complete product. €100M in Barcelona with a broken product is €100M wasted.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://www.maddyness.com/2023/10/04/qonto-barcelona-hub-espagne/" target="_blank" rel="noopener">
@@ -449,7 +480,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">02</div>
-        <div class="learning-title">Free by default for primary use cases</div>
+        <div class="learning-body">
+          <div class="learning-title">Free by default for primary use cases</div>
+          <div class="learning-desc">The Spanish market baseline is free business banking. Premium subscriptions only work for genuinely premium features.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://qonto.com/es/pricing" target="_blank" rel="noopener">
@@ -466,7 +500,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">03</div>
-        <div class="learning-title">Public Spain KPIs from day 1, or you'll never be accountable</div>
+        <div class="learning-body">
+          <div class="learning-title">Public Spain KPIs from day 1, or you'll never be accountable</div>
+          <div class="learning-desc">If you never publicly disclose Spanish user count, you've already decided not to be measured on it.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://qonto.com/en/company" target="_blank" rel="noopener">
@@ -505,7 +542,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">01</div>
-        <div class="learning-title">Rails don't win Spain. Show up.</div>
+        <div class="learning-body">
+          <div class="learning-title">Rails don't win Spain. Show up.</div>
+          <div class="learning-desc">Having Spanish IBAN, Bizum, SEPE before everyone else was necessary but not sufficient. Revolut arrived later with none and won 6:1.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://sifted.eu/articles/n26-ceo-valentin-stalf-interview" target="_blank" rel="noopener">
@@ -522,7 +562,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">02</div>
-        <div class="learning-title">One bad Spanish headline defines your brand for a decade</div>
+        <div class="learning-body">
+          <div class="learning-title">One bad Spanish headline defines your brand for a decade</div>
+          <div class="learning-desc">The 2020 SEPE scandal templated 'neobank isn't a real bank' and N26 inherits the frame to this day.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://spainsnews.com/n26-leaves-spanish-clients-without-unemployment-benefits-because-it-is-not-a-collaborating-entity/" target="_blank" rel="noopener">
@@ -539,7 +582,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">03</div>
-        <div class="learning-title">Institutional stability is a primary-bank requirement</div>
+        <div class="learning-body">
+          <div class="learning-title">Institutional stability is a primary-bank requirement</div>
+          <div class="learning-desc">Founder exits, growth caps and new BaFin issues signal counterparty risk. Spanish customers at 16% bank trust won't risk their salary.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://sifted.eu/articles/n26-cofounder-stalf-steps-down" target="_blank" rel="noopener">
@@ -582,7 +628,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">01</div>
-        <div class="learning-title">Hard-code BdE + 6pp into every Spanish credit product</div>
+        <div class="learning-body">
+          <div class="learning-title">Hard-code BdE + 6pp into every Spanish credit product</div>
+          <div class="learning-desc">Any revolving, overdraft, Flex or open-ended credit line must stay below BdE average + 6pp. Above it = mass litigation.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://www.legaltoday.com/practica-juridica/derecho-civil/civil/sts-de-pleno-149-2020-usura-en-tarjetas-revolving-2020-10-22/" target="_blank" rel="noopener">
@@ -599,7 +648,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">02</div>
-        <div class="learning-title">Brand equity is defensibility — build it before you need it</div>
+        <div class="learning-body">
+          <div class="learning-title">Brand equity is defensibility — build it before you need it</div>
+          <div class="learning-desc">A PE roll-up with no community had nobody to defend them when the ruling hit. Build brand affection before the crisis.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://theobjective.com/economia/banca/2025-12-11/wizink-singular-ubs-bancos-perdidas-espana/" target="_blank" rel="noopener">
@@ -616,7 +668,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">03</div>
-        <div class="learning-title">Plan for Spain's industrialised claims ecosystem</div>
+        <div class="learning-body">
+          <div class="learning-title">Plan for Spain's industrialised claims ecosystem</div>
+          <div class="learning-desc">Arriaga, Reclamador, OCU, FACUA are aggressive and mature. Documentation, plain-language disclosures and higher reserves from day 1.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://www.arriagaasociados.com/2023/04/comunicaciones-wizink-clientes-tarjeta-revolving/" target="_blank" rel="noopener">
@@ -659,7 +714,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">01</div>
-        <div class="learning-title">Pick one Spanish story and hold it 24 months minimum</div>
+        <div class="learning-body">
+          <div class="learning-title">Pick one Spanish story and hold it 24 months minimum</div>
+          <div class="learning-desc">Broker → 4% account → full bank in 5 years = narrative whiplash. Users end up trusting nothing you say about yourself.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://www.rankia.com/blog/mejores-brokers/5153157-trade-republic-opiniones-comisiones-regulacion-plataforma-analisis" target="_blank" rel="noopener">
@@ -676,7 +734,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">02</div>
-        <div class="learning-title">Don't bet the business on a headline number</div>
+        <div class="learning-body">
+          <div class="learning-title">Don't bet the business on a headline number</div>
+          <div class="learning-desc">€1 trades and 2% TAE acquire mercenaries, not customers. When PFOF ends and competitors match, the base walks.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://www.financemagnates.com/forex/analysis/pfof-ban-threatens-the-free-trade-era-for-europe-neobrokers/" target="_blank" rel="noopener">
@@ -689,7 +750,10 @@
     <div class="learning">
       <div class="learning-left">
         <div class="learning-num">03</div>
-        <div class="learning-title">Local ops, local language, local branch — from day 1</div>
+        <div class="learning-body">
+          <div class="learning-title">Local ops, local language, local branch — from day 1</div>
+          <div class="learning-desc">Running Spain on a German central stack for 4 years means Spanish support never exists, and trust never builds.</div>
+        </div>
       </div>
       <div class="learning-right">
         <a class="verbatim" href="https://www.trustpilot.com/review/www.traderepublic.com" target="_blank" rel="noopener">
