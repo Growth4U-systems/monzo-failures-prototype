@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Monzo Spain Competitors — Lessons</title>
+<title>Monzo Spain Competitors — The Biggest Missteps</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -10,7 +10,6 @@
   :root {
     --navy: #0E1A2B;
     --navy-card: #182638;
-    --navy-card-hi: #22334d;
     --coral: #FB4D3F;
     --coral-deep: #E03E30;
     --white: #FFFFFF;
@@ -42,7 +41,7 @@
     color: var(--text-lt);
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     border-radius: 6px;
-    padding: 44px 52px 40px;
+    padding: 44px 56px 40px;
     display: flex;
     flex-direction: column;
   }
@@ -52,7 +51,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 18px;
+    margin-bottom: 22px;
   }
   .pill {
     background: var(--white);
@@ -71,83 +70,45 @@
     letter-spacing: -0.5px;
   }
 
-  /* ── Hero (title + subtitle + context) ── */
+  /* ── Hero ── */
   .hero {
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 40px;
-    align-items: start;
-    margin-bottom: 18px;
+    margin-bottom: 26px;
   }
-  .hero-left { padding-right: 16px; }
   .title {
     font-family: 'Inter Tight', sans-serif;
-    font-size: 56px;
+    font-size: 62px;
     font-weight: 900;
     color: var(--white);
-    letter-spacing: -2px;
+    letter-spacing: -2.4px;
     line-height: 0.95;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .subtitle {
     font-family: 'Inter Tight', sans-serif;
-    font-size: 21px;
+    font-size: 22px;
     font-weight: 500;
     color: var(--coral);
     letter-spacing: -0.3px;
-    margin-bottom: 12px;
-    line-height: 1.15;
-  }
-  .context {
-    font-size: 12.5px;
-    line-height: 1.45;
-    color: var(--text-mid);
-    max-width: 720px;
+    line-height: 1.2;
+    max-width: 980px;
   }
 
-  /* Right side of hero: condensed stats strip */
-  .hero-right {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 16px;
-    padding-top: 6px;
-  }
-  .stat-mini {
-    display: flex;
-    flex-direction: column;
-  }
-  .stat-mini-value {
-    font-family: 'Inter Tight', sans-serif;
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--white);
-    line-height: 1;
-    letter-spacing: -0.5px;
-  }
-  .stat-mini-label {
-    font-size: 9.5px;
-    color: var(--text-mid);
-    margin-top: 3px;
-    line-height: 1.3;
-  }
-
-  /* ── Lessons (the main event) ── */
-  .lessons-header {
+  /* ── Missteps header ── */
+  .missteps-header {
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-bottom: 12px;
-    margin-top: 6px;
+    margin-bottom: 18px;
   }
-  .lessons-header .bar {
-    height: 3px;
+  .missteps-header .bar {
+    height: 2px;
     flex: 1;
     background: var(--coral);
     border-radius: 2px;
   }
-  .lessons-header .label {
+  .missteps-header .label {
     font-family: 'Inter Tight', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 800;
     color: var(--coral);
     text-transform: uppercase;
@@ -155,147 +116,90 @@
     white-space: nowrap;
   }
 
-  .lessons {
+  /* ── Missteps grid (2 big columns) ── */
+  .missteps {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 18px;
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
     flex: 1;
     min-height: 0;
   }
-  .lesson {
-    background: var(--navy-card);
-    border-radius: 12px;
-    padding: 22px 22px 20px;
-    position: relative;
+  .misstep {
     display: flex;
     flex-direction: column;
+    padding-top: 8px;
     border-top: 3px solid var(--coral);
   }
-  .lesson-num {
+  .misstep-num {
     font-family: 'Inter Tight', sans-serif;
     font-size: 13px;
     font-weight: 800;
     color: var(--coral);
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
+    letter-spacing: 2px;
+    margin-top: 12px;
+    margin-bottom: 10px;
   }
-  .lesson-title {
+  .misstep-title {
     font-family: 'Inter Tight', sans-serif;
-    font-size: 19px;
+    font-size: 22px;
     font-weight: 800;
     color: var(--white);
     line-height: 1.15;
-    letter-spacing: -0.4px;
-    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
   }
-  .lesson-evidence {
-    font-size: 11px;
-    color: var(--text-mid);
-    line-height: 1.5;
-    padding-bottom: 12px;
-    margin-bottom: 12px;
-    border-bottom: 1px solid var(--border);
+  .misstep-narrative {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--text-lt);
+    margin-bottom: 18px;
+    flex: 1;
   }
-  .lesson-evidence .evidence-label {
-    color: var(--coral);
-    font-weight: 700;
-    font-size: 9.5px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    display: block;
-    margin-bottom: 5px;
-  }
-  .lesson-action {
-    font-size: 11.5px;
+  .misstep-narrative strong {
     color: var(--white);
-    line-height: 1.45;
-    font-weight: 500;
+    font-weight: 600;
   }
-  .lesson-action .action-label {
-    color: var(--coral);
-    font-weight: 700;
-    font-size: 9.5px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  /* ── Footer strip (timeline + quote) ── */
-  .footer {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 30px;
-    margin-top: 18px;
+  .misstep-sources {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     padding-top: 14px;
     border-top: 1px solid var(--border);
   }
-  .timeline {
-    position: relative;
-  }
-  .timeline-label {
+  .misstep-sources-label {
     font-size: 9px;
     font-weight: 700;
     color: var(--text-dim);
     text-transform: uppercase;
     letter-spacing: 1.3px;
-    margin-bottom: 6px;
-  }
-  .timeline-line {
-    position: relative;
-    height: 2px;
-    background: var(--coral);
-    margin-top: 14px;
-    margin-bottom: 6px;
-  }
-  .timeline-stages {
-    display: grid;
-    grid-template-columns: repeat(var(--n-stages, 5), 1fr);
-    position: relative;
-  }
-  .timeline-stage {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-right: 6px;
-  }
-  .timeline-dot {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: var(--coral);
-    margin-top: -5.5px;
     margin-bottom: 4px;
   }
-  .timeline-text {
-    font-size: 9px;
-    font-weight: 600;
-    color: var(--text-mid);
-    letter-spacing: 0.2px;
-  }
-
-  .quote-block {
+  .source {
     display: flex;
-    flex-direction: column;
-  }
-  .quote-label {
-    font-size: 9px;
-    font-weight: 700;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 1.3px;
-    margin-bottom: 6px;
-  }
-  .quote-text {
-    font-size: 12px;
-    font-style: italic;
-    color: var(--text-lt);
-    line-height: 1.4;
-    margin-bottom: 6px;
-  }
-  .quote-attr {
-    font-size: 10px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    text-decoration: none;
     color: var(--text-mid);
+    font-size: 10.5px;
+    padding: 7px 10px;
+    background: var(--navy-card);
+    border-radius: 5px;
+    border-left: 2px solid var(--coral);
+    transition: background 0.15s;
+  }
+  .source:hover {
+    background: #1e2d44;
+    color: var(--text-lt);
+  }
+  .source-label {
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .source-arrow {
+    color: var(--coral);
+    font-size: 11px;
+    flex-shrink: 0;
   }
 
   .slide-note {
@@ -311,511 +215,383 @@
 
 <!-- ═══════════════════ 1. REVOLUT ═══════════════════ -->
 <div class="slide-note">Slide 1 / 6 — Revolut</div>
-<section class="slide" style="--n-stages:5;">
+<section class="slide">
   <div class="topbar">
-    <div class="pill">Failures in Spain</div>
+    <div class="pill">Missteps in Spain</div>
     <div class="brand">monzo</div>
   </div>
 
   <div class="hero">
-    <div class="hero-left">
-      <h1 class="title">Revolut</h1>
-      <div class="subtitle">won Spain, but on an infrastructure that can't serve it</div>
-      <p class="context">6M Spanish customers (13% penetration). 4th-largest bank in Spain by customer count, ahead of ING and Sabadell. Spain is now Revolut's third-largest market.</p>
-    </div>
-    <div class="hero-right">
-      <div class="stat-mini"><div class="stat-mini-value">6M</div><div class="stat-mini-label">Spanish customers</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">1,500</div><div class="stat-mini-label">employees in Spain</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">50</div><div class="stat-mini-label">Spanish ATMs</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">2.9/5</div><div class="stat-mini-label">support rating (ES)</div></div>
-    </div>
+    <h1 class="title">Revolut</h1>
+    <div class="subtitle">won Spain, but on an infrastructure that can't serve it</div>
   </div>
 
-  <div class="lessons-header">
-    <div class="label">Lessons for Monzo Spain</div>
+  <div class="missteps-header">
+    <div class="label">The biggest missteps</div>
     <div class="bar"></div>
   </div>
-  <div class="lessons">
-    <div class="lesson">
-      <div class="lesson-num">01</div>
-      <div class="lesson-title">Own the human support layer</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What Revolut shows</span>
-        Compliance runs on automated flags. At 6M Spanish users a 1% false-positive rate = 60,000 people locked out with no Spanish phone line. Architectural, not fixable.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Be the bank that picks up the phone in Spanish. Revolut's unit economics literally cannot copy this.
-      </div>
-    </div>
-    <div class="lesson">
-      <div class="lesson-num">02</div>
-      <div class="lesson-title">Ship the full rails before scaling marketing</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What Revolut shows</span>
-        1,500 employees, 50 ATMs, €4B revenue, yet still can't process Social Security, no BNPL in Spain, no mortgages. The lending roadmap is vaporware.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Spanish IBAN, Bizum, SEPE, AEAT, mortgages all live at GA. No "coming soon" tiles in the app.
-      </div>
-    </div>
-    <div class="lesson">
-      <div class="lesson-num">03</div>
-      <div class="lesson-title">Transparent pricing is a trust signal, not a feature</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What Revolut shows</span>
-        HelpMyCash 8.4/10 overall but 2.9/5 for support. Still charges a 1% weekend FX markup in 2026. They'll always extract margin where they can.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Zero hidden markups, zero weekend surcharges, zero "premium for basic features". Treat pricing integrity as core product.
-      </div>
-    </div>
-  </div>
 
-  <div class="footer">
-    <div class="timeline">
-      <div class="timeline-label">Spanish journey</div>
-      <div class="timeline-line"></div>
-      <div class="timeline-stages">
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2018 · EU passport</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2023 · ES IBAN</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2024 · BCN ATMs</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2026 · 6M users</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2026 · no mortgages</div></div>
+  <div class="missteps">
+
+    <div class="misstep">
+      <div class="misstep-num">01</div>
+      <div class="misstep-title">Scale became the thing regulators wouldn't let through</div>
+      <p class="misstep-narrative">
+        Revolut's operating thesis was to get to irreversible customer scale faster than anyone could catch them. <strong>It worked: 6M users in Spain, 10M in the UK before regulators could verify the core.</strong> But at that scale, automated AML triggers lock thousands of customers out every month with no human escalation and no Spanish phone line. The very thing that won them the market is now the thing they can't fix without breaking their unit economics. The service gap has become a licensing blocker in their home market, and the Spanish support rating sits at 2.9/5.
+      </p>
+      <div class="misstep-sources">
+        <div class="misstep-sources-label">Sources</div>
+        <a class="source" href="https://www.thetwentyminutevc.com/nik-storonsky" target="_blank" rel="noopener">
+          <span class="source-label">Storonsky: "If I could do it again, I'd do things faster and cheaper" · 20VC</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://www.finextra.com/newsarticle/44873/revolut-tops-fraud-leaderboard-by-a-country-mile" target="_blank" rel="noopener">
+          <span class="source-label">"Revolut tops fraud leaderboard" · BBC Panorama / Finextra · Oct 2024</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://sifted.eu/articles/revolut-banking-licence-analysis" target="_blank" rel="noopener">
+          <span class="source-label">"Service gap is touching key parts of the FCA's assessment" · Sifted 2025</span>
+          <span class="source-arrow">↗</span>
+        </a>
       </div>
     </div>
-    <div class="quote-block">
-      <div class="quote-label">In their words</div>
-      <div class="quote-text">"If I could do it again, I'd do things faster and cheaper."</div>
-      <div class="quote-attr">— Storonsky, 20VC</div>
+
+    <div class="misstep">
+      <div class="misstep-num">02</div>
+      <div class="misstep-title">Massive Spanish spend, no Spanish primary-bank product</div>
+      <p class="misstep-narrative">
+        <strong>1,500 employees in Spain. 50 Barcelona ATMs, the first in the world. And still no mortgages, no BNPL, no Social Security processing.</strong> Revolut built local presence without building the local product. BNPL launched in Ireland and Poland but not Spain. Mortgages are "announced for 2026-2027" with no regulatory pathway — the Spanish lending roadmap is vaporware. The result: Spanish users stay on Revolut as a secondary account while their primary bank remains elsewhere. The brand says primary; the product says second wallet.
+      </p>
+      <div class="misstep-sources">
+        <div class="misstep-sources-label">Sources</div>
+        <a class="source" href="https://www.catalannews.com/business/item/revolut-six-million-customers-spain-8-january-2026" target="_blank" rel="noopener">
+          <span class="source-label">"Revolut reaches 6M Spanish customers" · Catalan News · Jan 2026</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://www.financemagnates.com/fintech/revolut-hits-6-million-users-in-spain-becoming-fourth-largest-bank-by-penetration/" target="_blank" rel="noopener">
+          <span class="source-label">"4th-largest bank by penetration, no mortgages" · Finance Magnates · 2026</span>
+          <span class="source-arrow">↗</span>
+        </a>
+      </div>
     </div>
+
   </div>
 </section>
 
 <!-- ═══════════════════ 2. BUNQ ═══════════════════ -->
 <div class="slide-note">Slide 2 / 6 — Bunq</div>
-<section class="slide" style="--n-stages:5;">
+<section class="slide">
   <div class="topbar">
-    <div class="pill">Failures in Spain</div>
+    <div class="pill">Missteps in Spain</div>
     <div class="brand">monzo</div>
   </div>
 
   <div class="hero">
-    <div class="hero-left">
-      <h1 class="title">Bunq</h1>
-      <div class="subtitle">seven years in Spain, still trapped in the expat niche</div>
-      <p class="context">Live in Spain since 2021. Launched Bizum only in May 2025, gated behind paid tiers. Tripled Spanish users in 2024, off a tiny base. Treated as "successful niche player", not primary-bank contender.</p>
-    </div>
-    <div class="hero-right">
-      <div class="stat-mini"><div class="stat-mini-value">7 yrs</div><div class="stat-mini-label">in Spain, still niche</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">May '25</div><div class="stat-mini-label">Bizum (paid only)</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">3.4/5</div><div class="stat-mini-label">Google Play (ES)</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">0</div><div class="stat-mini-label">ES users disclosed</div></div>
-    </div>
+    <h1 class="title">Bunq</h1>
+    <div class="subtitle">seven years in Spain, still trapped in the expat niche</div>
   </div>
 
-  <div class="lessons-header">
-    <div class="label">Lessons for Monzo Spain</div>
+  <div class="missteps-header">
+    <div class="label">The biggest missteps</div>
     <div class="bar"></div>
   </div>
-  <div class="lessons">
-    <div class="lesson">
-      <div class="lesson-num">01</div>
-      <div class="lesson-title">An expat wedge is a beachhead, not a market</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What Bunq shows</span>
-        The no-NIE onboarding was surgical. 7 years later still trapped in it. Spanish autónomos need SEPE, AEAT, TGSS, mature Bizum, none of which Bunq built.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Use the expat flow to open the door. Ship the full Spanish stack so users can stay as they grow.
-      </div>
-    </div>
-    <div class="lesson">
-      <div class="lesson-num">02</div>
-      <div class="lesson-title">Subscription models fight Spain's free-banking culture</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What Bunq shows</span>
-        Gating Bizum behind €3.99-€18.99 tiers in a market where 28M users get it free by default. Culturally offensive. Dead on arrival for native Spaniards.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Bizum in the free tier, full stop. Monetise on lending, FX, savings — not on everyday Spanish primitives.
-      </div>
-    </div>
-    <div class="lesson">
-      <div class="lesson-num">03</div>
-      <div class="lesson-title">Human support is a unit-economics question</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What Bunq shows</span>
-        Google Play 3.4/5. Support is a Dutch phone number, English-preferring staff. Fixing it needs 3-5x headcount, which kills the margin that makes them profitable.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Spanish-speaking human support in the cost model from day 1. Not a line item to optimise later.
-      </div>
-    </div>
-  </div>
 
-  <div class="footer">
-    <div class="timeline">
-      <div class="timeline-label">Spanish journey</div>
-      <div class="timeline-line"></div>
-      <div class="timeline-stages">
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2021 · ES launch</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2023 · ES IBAN late</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2024 · 3x tiny base</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2025 · Bizum (paid)</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2026 · still niche</div></div>
+  <div class="missteps">
+
+    <div class="misstep">
+      <div class="misstep-num">01</div>
+      <div class="misstep-title">Won the wedge, never built the conversion path</div>
+      <p class="misstep-narrative">
+        Bunq's no-NIE onboarding for expats was surgical — genuinely the best in Europe. But winning a beachhead is not winning a market. <strong>Seven years into Spain, Bunq still doesn't have Bizum in the free tier, no SEPE, no AEAT, no TGSS, no Spanish-language human support.</strong> They won the expat who lands in Madrid without an NIE and never built what that user needs to stay when they become resident and want a primary bank. Bizum finally launched in May 2025 — four years late, and only in paid tiers that cost €3.99 to €18.99 per month in a market where 28M Spaniards get it free by default. Culturally dead on arrival for native users.
+      </p>
+      <div class="misstep-sources">
+        <div class="misstep-sources-label">Sources</div>
+        <a class="source" href="https://thepaypers.com/fintech/news/bunq-integrates-bizum-to-advance-its-position-in-spain" target="_blank" rel="noopener">
+          <span class="source-label">"Bunq integrates Bizum" — 4 years after Spain launch · The Paypers · May 2025</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://www.infobae.com/america/agencias/2025/05/27/bunq-lanza-bizum-para-sus-usuarios-en-espana/" target="_blank" rel="noopener">
+          <span class="source-label">"Bunq lanza Bizum para sus usuarios en España" — paid tiers only · Infobae</span>
+          <span class="source-arrow">↗</span>
+        </a>
       </div>
     </div>
-    <div class="quote-block">
-      <div class="quote-label">The silence</div>
-      <div class="quote-text">"Niknam has never publicly addressed Spain underperformance, the freezes, or the EasyGroup loss. That silence is a finding."</div>
-      <div class="quote-attr">— Deep Research, Apr 2026</div>
+
+    <div class="misstep">
+      <div class="misstep-num">02</div>
+      <div class="misstep-title">Founder-absolute governance, no external discipline</div>
+      <p class="misstep-narrative">
+        Niknam self-funded ~€98.5M and retains &gt;85% control. That gave Bunq patience, profitability and boldness most VC neobanks never had. It also gave them <strong>no external discipline</strong>: three tier rebrands, a Finn chatbot their own founder admits is "still not near where we would like it to be", an EasyGroup trademark lawsuit they lost publicly, a US banking charter withdrawn after 301 days, and a support function that delivers 4-month frozen accounts with no human recourse. Profitability itself is an ECB rate bet — €85M net profit is interest on €8B+ in deposits. 100bps of cuts wipes it out.
+      </p>
+      <div class="misstep-sources">
+        <div class="misstep-sources-label">Sources</div>
+        <a class="source" href="https://tech.eu/2024/05/14/bunq-launches-beefed-up-ai-chatbot-20-and-confirms-commitment-to-re-apply-for-us-banking-licence-after-withdrawal/" target="_blank" rel="noopener">
+          <span class="source-label">Niknam: "That was a mistake on our end" · Tech.eu · May 2024</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://easy.com/banking-giants-bunq-com-in-a-humiliating-climb-down-by-stopping-all-illegal-use-of-easy-prefix/" target="_blank" rel="noopener">
+          <span class="source-label">"Bunq in humiliating climbdown" — EasyGroup trademark lawsuit · Dec 2024</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://www.trustpilot.com/review/bunq.com" target="_blank" rel="noopener">
+          <span class="source-label">"Scam. Theft. Held hostage. Funds frozen 4 months." · Trustpilot pattern</span>
+          <span class="source-arrow">↗</span>
+        </a>
+      </div>
     </div>
+
   </div>
 </section>
 
 <!-- ═══════════════════ 3. QONTO ═══════════════════ -->
 <div class="slide-note">Slide 3 / 6 — Qonto</div>
-<section class="slide" style="--n-stages:5;">
+<section class="slide">
   <div class="topbar">
-    <div class="pill">Failures in Spain</div>
+    <div class="pill">Missteps in Spain</div>
     <div class="brand">monzo</div>
   </div>
 
   <div class="hero">
-    <div class="hero-left">
-      <h1 class="title">Qonto</h1>
-      <div class="subtitle">€100M in Barcelona with no product to sell</div>
-      <p class="context">French B2B neobank. €100M into a Barcelona support hub. Spain user count never publicly disclosed — which tells you what you need to know. Only 12,100 monthly branded searches for "Qonto" in Spain.</p>
-    </div>
-    <div class="hero-right">
-      <div class="stat-mini"><div class="stat-mini-value">€29</div><div class="stat-mini-label">cheapest plan/mo</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">€100M</div><div class="stat-mini-label">in BCN hub</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">12.1K</div><div class="stat-mini-label">monthly searches ES</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">No</div><div class="stat-mini-label">TGSS / Bizum</div></div>
-    </div>
+    <h1 class="title">Qonto</h1>
+    <div class="subtitle">€100M in Barcelona, no complete product to sell</div>
   </div>
 
-  <div class="lessons-header">
-    <div class="label">Lessons for Monzo Spain</div>
+  <div class="missteps-header">
+    <div class="label">The biggest missteps</div>
     <div class="bar"></div>
   </div>
-  <div class="lessons">
-    <div class="lesson">
-      <div class="lesson-num">01</div>
-      <div class="lesson-title">Infrastructure gaps nullify marketing spend</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What Qonto shows</span>
-        €100M poured into Barcelona. Without Bizum and TGSS the product was incomplete, so the marketing had nothing to sell. Awareness among Spanish autónomos stayed low.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        No local team, no local spend, until the local product is complete. Rails first, reach second.
-      </div>
-    </div>
-    <div class="lesson">
-      <div class="lesson-num">02</div>
-      <div class="lesson-title">In Spain, free is the default</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What Qonto shows</span>
-        €29/month in a market where BBVA, Santander and Sabadell now offer free business accounts with up to €720 in cash incentives. No path to match without destroying the model.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Free by default for primary-bank use cases. Paid tiers only for genuinely premium features, never for the basics Spanish banks give away.
-      </div>
-    </div>
-    <div class="lesson">
-      <div class="lesson-num">03</div>
-      <div class="lesson-title">If you won't disclose the user count, the number is the answer</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What Qonto shows</span>
-        Qonto publicly discloses 600K+ across 8 markets but never breaks out Spain. Their own research calls Spain "limited expansion". Silence as data.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Set Spain-specific public KPIs from day 1. If we can't talk about them, we'll know we're not winning.
-      </div>
-    </div>
-  </div>
 
-  <div class="footer">
-    <div class="timeline">
-      <div class="timeline-label">Spanish journey</div>
-      <div class="timeline-line"></div>
-      <div class="timeline-stages">
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2019 · ES launch</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2022 · Penta buy</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2023 · BCN hub</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2024 · ES gap exposed</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2026 · no Bizum</div></div>
+  <div class="missteps">
+
+    <div class="misstep">
+      <div class="misstep-num">01</div>
+      <div class="misstep-title">Local presence without local product</div>
+      <p class="misstep-narrative">
+        Qonto opened a Barcelona support hub with <strong>€100M in investment</strong> — one of the biggest B2B fintech bets on Spain in the last five years. But they launched into Spain without TGSS collaborator status (can't process Social Security payments), without Bizum (missing &gt;95% of Spain's P2P market), and without a free plan in a market where free business banking is standard. Every Spanish autónomo using Qonto still needs a parallel Spanish bank account. That parallel account keeps the door permanently open for every competitor. <strong>Qonto has never publicly disclosed its Spanish user count</strong> — in its own internal research the company labels Spain "limited expansion" compared to France and Germany.
+      </p>
+      <div class="misstep-sources">
+        <div class="misstep-sources-label">Sources</div>
+        <a class="source" href="https://www.maddyness.com/2023/10/04/qonto-barcelona-hub-espagne/" target="_blank" rel="noopener">
+          <span class="source-label">"Qonto opens Barcelona hub with €100M investment" · Maddyness</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://qonto.com/en/company" target="_blank" rel="noopener">
+          <span class="source-label">Qonto discloses 600K+ across 8 markets — Spain never broken out</span>
+          <span class="source-arrow">↗</span>
+        </a>
       </div>
     </div>
-    <div class="quote-block">
-      <div class="quote-label">In their own words</div>
-      <div class="quote-text">"Spain: limited expansion compared to France and Germany."</div>
-      <div class="quote-attr">— Qonto internal research disclosure</div>
+
+    <div class="misstep">
+      <div class="misstep-num">02</div>
+      <div class="misstep-title">Premium subscription in Europe's most price-sensitive banking market</div>
+      <p class="misstep-narrative">
+        Qonto's cheapest plan in Spain is <strong>€29 per month</strong>. They are the only competitor charging from day one. Meanwhile BBVA, Santander and Sabadell now offer free business accounts with up to €720 in cash incentives — the Spanish freelancer does the math in five seconds. Qonto can't match without destroying the subscription economics that make the business profitable in France and Germany. It's a pricing squeeze with no exit. The model that works in Paris and Berlin structurally cannot translate to Madrid, and Qonto can't change it without rewriting the company.
+      </p>
+      <div class="misstep-sources">
+        <div class="misstep-sources-label">Sources</div>
+        <a class="source" href="https://qonto.com/es/pricing" target="_blank" rel="noopener">
+          <span class="source-label">Qonto Spain pricing: plans from €29/month · Qonto.com/es/pricing</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://www.bbva.es/empresas/productos/cuenta-online-negocios.html" target="_blank" rel="noopener">
+          <span class="source-label">BBVA, Santander, Sabadell: free business accounts with €720 incentives · 2026</span>
+          <span class="source-arrow">↗</span>
+        </a>
+      </div>
     </div>
+
   </div>
 </section>
 
 <!-- ═══════════════════ 4. N26 ═══════════════════ -->
 <div class="slide-note">Slide 4 / 6 — N26</div>
-<section class="slide" style="--n-stages:5;">
+<section class="slide">
   <div class="topbar">
-    <div class="pill">Failures in Spain</div>
+    <div class="pill">Missteps in Spain</div>
     <div class="brand">monzo</div>
   </div>
 
   <div class="hero">
-    <div class="hero-left">
-      <h1 class="title">N26</h1>
-      <div class="subtitle">had every Spanish advantage and still lost to Revolut</div>
-      <p class="context">~1M Spanish users. Longest-tenured neobank in Spain (2016). First with Spanish IBAN (2019). First with Bizum. Only neobank with Social Security integration. Every structural advantage — and still marginal.</p>
-    </div>
-    <div class="hero-right">
-      <div class="stat-mini"><div class="stat-mini-value">~1M</div><div class="stat-mini-label">Spanish users</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">2019</div><div class="stat-mini-label">ES IBAN (first)</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">6x</div><div class="stat-mini-label">Revolut vs N26</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">Sep '23</div><div class="stat-mini-label">SEPE (3 yrs late)</div></div>
-    </div>
+    <h1 class="title">N26</h1>
+    <div class="subtitle">had every Spanish advantage and still lost to Revolut</div>
   </div>
 
-  <div class="lessons-header">
-    <div class="label">Lessons for Monzo Spain</div>
+  <div class="missteps-header">
+    <div class="label">The biggest missteps</div>
     <div class="bar"></div>
   </div>
-  <div class="lessons">
-    <div class="lesson">
-      <div class="lesson-num">01</div>
-      <div class="lesson-title">Rails don't win the market. Show up.</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What N26 shows</span>
-        Every structural advantage — and Revolut arrived years later with none of them and captured 6M to N26's ~1M. Shallow acquisition, very few salary domiciliations.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Pair product readiness with sustained Spanish brand presence from day 1. Rails without reach is a museum exhibit.
-      </div>
-    </div>
-    <div class="lesson">
-      <div class="lesson-num">02</div>
-      <div class="lesson-title">A bad 2020 headline can define your brand for a decade</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What N26 shows</span>
-        COVID 2020: users couldn't receive SEPE unemployment benefits. elDiario.es, Cinco Días, El Independiente ran the story for weeks. "Neobank isn't a real bank" became the press template.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Every Spanish-specific integration (SEPE, TGSS, AEAT, Hacienda) live at GA. No crisis-narrative opening.
-      </div>
-    </div>
-    <div class="lesson">
-      <div class="lesson-num">03</div>
-      <div class="lesson-title">Institutional fragility kills primary-bank conversion</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What N26 shows</span>
-        Both co-founders forced out in 4 months. €80M in compliance and BaFin keeps finding new issues. For Spanish customers at 16% bank-trust baseline, counterparty risk is a deal-breaker.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Lean hard on the UK banking licence heritage. Spanish trust is won by looking boringly reliable.
-      </div>
-    </div>
-  </div>
 
-  <div class="footer">
-    <div class="timeline">
-      <div class="timeline-label">Spanish journey</div>
-      <div class="timeline-line"></div>
-      <div class="timeline-stages">
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2016 · ES launch</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2019 · ES IBAN</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2020 · SEPE scandal</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2023 · SEPE joined</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2025 · founders out</div></div>
+  <div class="missteps">
+
+    <div class="misstep">
+      <div class="misstep-num">01</div>
+      <div class="misstep-title">The 2020 SEPE scandal permanently templated "neobank isn't a real bank"</div>
+      <p class="misstep-narrative">
+        In 2020, during COVID, Spanish users who had closed their BBVA accounts to move to N26 discovered they <strong>could not receive SEPE unemployment benefits</strong> because N26 was not a collaborating entity with Seguridad Social. The story ran in elDiario.es, Cinco Días and El Independiente for weeks. "Neobank isn't a real bank" became the default Spanish press frame for anyone pitching a digital challenger — and N26 inherits it to this day. N26 only became a SEPE collaborator in September 2023, more than three years after the scandal. The gap between having the rails and having the trust turned out to be three years long, and the damage has never been fully undone.
+      </p>
+      <div class="misstep-sources">
+        <div class="misstep-sources-label">Sources</div>
+        <a class="source" href="https://spainsnews.com/n26-leaves-spanish-clients-without-unemployment-benefits-because-it-is-not-a-collaborating-entity/" target="_blank" rel="noopener">
+          <span class="source-label">"N26 leaves Spanish clients without unemployment benefits" · Spain's News 2020</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://www.eldiario.es/economia/n26-banco-berlin-criticado-estafadores-clientes-prestacion-paro_1_6033220.html" target="_blank" rel="noopener">
+          <span class="source-label">"N26, criticado por estafadores y clientes sin prestación en el paro" · elDiario.es</span>
+          <span class="source-arrow">↗</span>
+        </a>
       </div>
     </div>
-    <div class="quote-block">
-      <div class="quote-label">The silence</div>
-      <div class="quote-text">"Neither founder has ever publicly framed Spain as a mistake. The SEPE scandal is never mentioned in interviews."</div>
-      <div class="quote-attr">— Deep Research, Apr 2026</div>
+
+    <div class="misstep">
+      <div class="misstep-num">02</div>
+      <div class="misstep-title">Rails without reach, and a founder who never had the regulator conversation</div>
+      <p class="misstep-narrative">
+        N26 was the first neobank with a Spanish IBAN (2019), the first with Bizum, and the only one with Social Security integration. Every structural advantage. And <strong>Revolut arrived years later with none of those rails and still captured 6x the Spanish users</strong>. Why? In Stalf's own words to Sifted: "We had a banking licence for five years before having any discussion with the regulator." The BaFin growth cap in 2021 then froze N26 at 50K new customers per month for three years, exactly the window when Revolut scaled freely. Both co-founders were forced out inside four months in 2025. Product readiness is not market presence — N26 proved that the hard way.
+      </p>
+      <div class="misstep-sources">
+        <div class="misstep-sources-label">Sources</div>
+        <a class="source" href="https://sifted.eu/articles/n26-ceo-valentin-stalf-interview" target="_blank" rel="noopener">
+          <span class="source-label">Stalf: "Banking licence for 5 years before regulator dialogue" · Sifted</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://techcrunch.com/2024/05/29/germanys-financial-regulator-ends-aml-cap-on-n26-signups-after-10m-fine/" target="_blank" rel="noopener">
+          <span class="source-label">"BaFin ends AML cap on N26 signups after €10M fine" · TechCrunch May 2024</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://sifted.eu/articles/n26-cofounder-stalf-steps-down" target="_blank" rel="noopener">
+          <span class="source-label">"Stalf steps down following investor bust-up" · Sifted Aug 2025</span>
+          <span class="source-arrow">↗</span>
+        </a>
+      </div>
     </div>
+
   </div>
 </section>
 
 <!-- ═══════════════════ 5. WIZINK ═══════════════════ -->
 <div class="slide-note">Slide 5 / 6 — WiZink</div>
-<section class="slide" style="--n-stages:5;">
+<section class="slide">
   <div class="topbar">
-    <div class="pill">Failures in Spain</div>
+    <div class="pill">Missteps in Spain</div>
     <div class="brand">monzo</div>
   </div>
 
   <div class="hero">
-    <div class="hero-left">
-      <h1 class="title">WiZink</h1>
-      <div class="subtitle">one Spanish Supreme Court ruling destroyed the core</div>
-      <p class="context">Spanish credit-card specialist. PE-owned by Värde Partners since 2014. 1.6M Spanish customers, ~€3.4B card book. Assembled from Banco Popular, Citibank Spain and Barclaycard Spain for yield extraction.</p>
-    </div>
-    <div class="hero-right">
-      <div class="stat-mini"><div class="stat-mini-value">1.6M</div><div class="stat-mini-label">ES customers</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">€81M</div><div class="stat-mini-label">2024 provisions</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">3</div><div class="stat-mini-label">CEOs in 4 years</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">2027</div><div class="stat-mini-label">profit target</div></div>
-    </div>
+    <h1 class="title">WiZink</h1>
+    <div class="subtitle">one Spanish Supreme Court ruling destroyed the core</div>
   </div>
 
-  <div class="lessons-header">
-    <div class="label">Lessons for Monzo Spain</div>
+  <div class="missteps-header">
+    <div class="label">The biggest missteps</div>
     <div class="bar"></div>
   </div>
-  <div class="lessons">
-    <div class="lesson">
-      <div class="lesson-num">01</div>
-      <div class="lesson-title">Hard-code BdE + 6pp into every credit product</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What WiZink shows</span>
-        STS 149/2020 reinterpreted a 1908 usury law: 26.82% APR retroactively illegal. STS 258/2023 set the rule: BdE average + 6pp. Any revolving/overdraft/Flex above this line = mass litigation.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Pricing governance for every Spanish credit product owns the BdE category baseline. Above BdE + 6pp requires executive sign-off.
-      </div>
-    </div>
-    <div class="lesson">
-      <div class="lesson-num">02</div>
-      <div class="lesson-title">Brand equity is defensibility</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What WiZink shows</span>
-        A PE roll-up of card portfolios acquired via airport stands and mall kiosks. No community, no loyalty. When the usury ruling hit, nobody defended them. Arriaga and Reclamador industrialised the claims.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Build brand affection before you need it. In Spain a defenceless brand during a crisis becomes the category cautionary tale.
-      </div>
-    </div>
-    <div class="lesson">
-      <div class="lesson-num">03</div>
-      <div class="lesson-title">Plan for Spain's industrialised claims ecosystem</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What WiZink shows</span>
-        "Reclamar WiZink" became a household phrase. €81M in revolving provisions in 2024 alone. Losses keep widening despite rate adjustments. The claims tail outlasts the product pivot.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Spanish pre-contractual/contractual documentation is a launch-blocker. Proactive OCU and FACUA relationships from day 1. Higher-than-UK litigation reserves baked in.
-      </div>
-    </div>
-  </div>
 
-  <div class="footer">
-    <div class="timeline">
-      <div class="timeline-label">The rupture</div>
-      <div class="timeline-line"></div>
-      <div class="timeline-stages">
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2014 · Värde buys</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2018 · full stake</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2020 · STS 149</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2023 · 6pp rule</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2025 · losses widen</div></div>
+  <div class="missteps">
+
+    <div class="misstep">
+      <div class="misstep-num">01</div>
+      <div class="misstep-title">Built the whole business on APRs the Supreme Court made retroactively illegal</div>
+      <p class="misstep-narrative">
+        Värde Partners bought WiZink in 2014 as a pure PE play on Spanish revolving credit cards at <strong>20-27% APR</strong>. It worked for five years. Then in March 2020 the Spanish Supreme Court issued STS 149/2020: reinterpreting the 1908 Ley Azcárate, it ruled that a 26.82% APR card inherited from Citibank was usurious. Contracts voided. Excess interest refundable on the entire legacy book. STS 258/2023 then fixed the quantitative rule: any revolving APR above the Bank of Spain average + 6 percentage points = usurious. <strong>WiZink did not see the ruling coming</strong>, had not stress-tested their pricing model against it, and could not pivot the unit economics in time.
+      </p>
+      <div class="misstep-sources">
+        <div class="misstep-sources-label">Sources</div>
+        <a class="source" href="https://www.legaltoday.com/practica-juridica/derecho-civil/civil/sts-de-pleno-149-2020-usura-en-tarjetas-revolving-2020-10-22/" target="_blank" rel="noopener">
+          <span class="source-label">STS 149/2020 — "Usura en tarjetas revolving" · Legal Today</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://www.abogacia.es/publicaciones/blogs/blog-de-derecho-de-los-consumidores/la-sala-1a-del-ts-fija-en-seis-puntos-porcentuales/" target="_blank" rel="noopener">
+          <span class="source-label">STS 258/2023 fixes the rule: BdE average + 6pp = usurious · Abogacía Española</span>
+          <span class="source-arrow">↗</span>
+        </a>
       </div>
     </div>
-    <div class="quote-block">
-      <div class="quote-label">In the Spanish press</div>
-      <div class="quote-text">"WiZink, Singular y UBS: los bancos incapaces de salir de pérdidas en España."</div>
-      <div class="quote-attr">— TheObjective, Dec 2025</div>
+
+    <div class="misstep">
+      <div class="misstep-num">02</div>
+      <div class="misstep-title">PE roll-up with no Spanish brand to defend them</div>
+      <p class="misstep-narrative">
+        WiZink was not built as a bank with customers. It was assembled as a portfolio — Banco Popular's consumer credit unit, plus Citibank Spain's cards, plus Barclaycard Spain's cards — <strong>acquired through airport stands, mall kiosks and co-brand deals</strong>. 1.6M Spanish customers, zero brand equity. When STS 149/2020 hit, nobody defended them. Arriaga Asociados, Reclamador, Indemniza and a dozen other firms industrialised "reclamar WiZink" into a household phrase. €81M in revolving provisions in 2024 alone. Losses widening again in 2025. The 2025-2029 plan targets profitability only in 2027. Three CEOs through the crisis. The PE yield-extraction model had no cultural moat to absorb the legal shock.
+      </p>
+      <div class="misstep-sources">
+        <div class="misstep-sources-label">Sources</div>
+        <a class="source" href="https://www.arriagaasociados.com/2023/04/comunicaciones-wizink-clientes-tarjeta-revolving/" target="_blank" rel="noopener">
+          <span class="source-label">"Las comunicaciones de WiZink sobre las Tarjetas Revolving" · Arriaga Asociados</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://theobjective.com/economia/banca/2025-12-11/wizink-singular-ubs-bancos-perdidas-espana/" target="_blank" rel="noopener">
+          <span class="source-label">"WiZink, Singular y UBS: incapaces de salir de pérdidas en España" · TheObjective Dec 2025</span>
+          <span class="source-arrow">↗</span>
+        </a>
+      </div>
     </div>
+
   </div>
 </section>
 
 <!-- ═══════════════════ 6. TRADE REPUBLIC ═══════════════════ -->
 <div class="slide-note">Slide 6 / 6 — Trade Republic</div>
-<section class="slide" style="--n-stages:5;">
+<section class="slide">
   <div class="topbar">
-    <div class="pill">Failures in Spain</div>
+    <div class="pill">Missteps in Spain</div>
     <div class="brand">monzo</div>
   </div>
 
   <div class="hero">
-    <div class="hero-left">
-      <h1 class="title">Trade Republic</h1>
-      <div class="subtitle">1M Spanish users, but none of them see it as a bank</div>
-      <p class="context">Live in Spain since October 2021. Spanish IBAN and Bizum only from June 2025 (4 years on a German central stack). 1M+ Spanish users by January 2026. Spain is now a top-3 market by volume.</p>
-    </div>
-    <div class="hero-right">
-      <div class="stat-mini"><div class="stat-mini-value">1M+</div><div class="stat-mini-label">Spanish users</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">Jun '25</div><div class="stat-mini-label">ES IBAN + Bizum</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">10–20</div><div class="stat-mini-label">primary-bank NPS</div></div>
-      <div class="stat-mini"><div class="stat-mini-value">&gt;30%</div><div class="stat-mini-label">revenue from PFOF</div></div>
-    </div>
+    <h1 class="title">Trade Republic</h1>
+    <div class="subtitle">1M Spanish users, but none of them see it as a bank</div>
   </div>
 
-  <div class="lessons-header">
-    <div class="label">Lessons for Monzo Spain</div>
+  <div class="missteps-header">
+    <div class="label">The biggest missteps</div>
     <div class="bar"></div>
   </div>
-  <div class="lessons">
-    <div class="lesson">
-      <div class="lesson-num">01</div>
-      <div class="lesson-title">Cede the investing wallet. Own the primary account.</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What TR shows</span>
-        Spanish primary-bank NPS 10-20 vs 35-45 for investing. Users say "bueno para cash, no como banco principal". TR is entrenched as the investing app. The rewiring is fighting physics.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Don't compete on €1 trades or 4% hooks. Own "your everyday money in Spain" and let TR keep the investing corner.
-      </div>
-    </div>
-    <div class="lesson">
-      <div class="lesson-num">02</div>
-      <div class="lesson-title">A price war acquires mercenaries, not customers</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What TR shows</span>
-        Users came for €1 trades and 2% TAE. When competitors match, they leave in 5 minutes. Revolut, N26 and Wise are already closing the gap. Optimised for acquisition, not retention.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        Compete on product and service depth, not on the headline number. Trust compounds; a rate hook doesn't.
-      </div>
-    </div>
-    <div class="lesson">
-      <div class="lesson-num">03</div>
-      <div class="lesson-title">Pick one story and hold it 24 months</div>
-      <div class="lesson-evidence">
-        <span class="evidence-label">What TR shows</span>
-        Broker (2019) → 4% account (2023) → full bank with Spanish IBAN (2025). Three positionings in five years. The narrative whiplash breaks brand equity and Spanish NPS.
-      </div>
-      <div class="lesson-action">
-        <span class="action-label">What Monzo does</span>
-        One Spanish story — "your everyday money with Bizum, salary, international life" — for 24 months minimum. Every feature slots into it, never replaces it.
-      </div>
-    </div>
-  </div>
 
-  <div class="footer">
-    <div class="timeline">
-      <div class="timeline-label">Spanish journey</div>
-      <div class="timeline-line"></div>
-      <div class="timeline-stages">
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">Oct '21 · ES launch</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">2023 · 4% account</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">Jun '25 · ES IBAN</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">Jan '26 · 1M ES</div></div>
-        <div class="timeline-stage"><div class="timeline-dot"></div><div class="timeline-text">Jun '26 · PFOF ban</div></div>
+  <div class="missteps">
+
+    <div class="misstep">
+      <div class="misstep-num">01</div>
+      <div class="misstep-title">Ran Spain on a German central stack for four years</div>
+      <p class="misstep-narrative">
+        Trade Republic launched in Spain in October 2021 and <strong>did not ship a Spanish IBAN, Bizum or a local branch until June 2025</strong> — four years later. For those four years, every Spanish user was operating on a German stack with German-first support, German tax documentation, and no local ops team. The result, in Phasen's own Spanish research: primary-bank NPS of 10-20 versus 35-45 for investing. Users explicitly say "bueno para tener cash, pero no lo uses como banco principal." The CNMV had to publicly warn about phishing clones of Trade Republic — which flourished precisely because Spanish users could not reach real support. TR now has 1M Spanish users who trust it as a broker and do not trust it as a bank.
+      </p>
+      <div class="misstep-sources">
+        <div class="misstep-sources-label">Sources</div>
+        <a class="source" href="https://www.businesswire.com/news/home/20250108855357/en/" target="_blank" rel="noopener">
+          <span class="source-label">"Trade Republic Opens National Branches in France, Spain, Italy" · Jan 2025</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://territoriofintech.com/neobancos/alerta-de-la-cnmv-detecta-un-clon-de-trade-republic-y-ochos-chiringuitos-financieros-mas/" target="_blank" rel="noopener">
+          <span class="source-label">CNMV alerts: phishing clone of Trade Republic · Territorio Fintech</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://www.rankia.com/blog/mejores-brokers/5153157-trade-republic-opiniones-comisiones-regulacion-plataforma-analisis" target="_blank" rel="noopener">
+          <span class="source-label">"Bueno para cash, no como banco principal" · Rankia forum</span>
+          <span class="source-arrow">↗</span>
+        </a>
       </div>
     </div>
-    <div class="quote-block">
-      <div class="quote-label">Spanish users</div>
-      <div class="quote-text">"Bueno para tener cash, pero no lo uses como banco principal."</div>
-      <div class="quote-attr">— Rankia forum</div>
+
+    <div class="misstep">
+      <div class="misstep-num">02</div>
+      <div class="misstep-title">Built the entire business on a revenue stream the EU is about to ban</div>
+      <p class="misstep-narrative">
+        <strong>Over a third of Trade Republic's revenue comes from Payment for Order Flow.</strong> The EU ban on PFOF hits on 30 June 2026. The MTF licence they obtained in January 2026 is a mitigation bet, not a proven replacement. The moment PFOF ends, TR either raises commissions — breaking the "€1 trades" promise that acquired 10M users — or absorbs a 30%+ revenue hit. Meanwhile the users themselves came for the deal, not the brand. Revolut, N26 and Wise are all matching the offer. Spanish users in particular came for €1 trades and 2% TAE, and they will leave in five minutes the moment someone beats the price. Mercenary customers with zero switching cost.
+      </p>
+      <div class="misstep-sources">
+        <div class="misstep-sources-label">Sources</div>
+        <a class="source" href="https://www.financemagnates.com/forex/analysis/pfof-ban-threatens-the-free-trade-era-for-europe-neobrokers/" target="_blank" rel="noopener">
+          <span class="source-label">"PFOF Ban Threatens the Free Trade Era for Europe Neobrokers" · Finance Magnates</span>
+          <span class="source-arrow">↗</span>
+        </a>
+        <a class="source" href="https://www.trustpilot.com/review/www.traderepublic.com" target="_blank" rel="noopener">
+          <span class="source-label">Trustpilot 1.6–2.0★ over 33K+ reviews · support and withdrawal complaints</span>
+          <span class="source-arrow">↗</span>
+        </a>
+      </div>
     </div>
+
   </div>
 </section>
 
